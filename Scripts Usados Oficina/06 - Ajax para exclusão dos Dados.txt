@@ -1,0 +1,31 @@
+<!--AJAX PARA EXCLUSÃO DOS DADOS -->
+<script type="text/javascript">
+	$(document).ready(function () {
+		var pag = "<?=$pag?>";
+		$('#btn-deletar').click(function (event) {
+			event.preventDefault();
+
+			$.ajax({
+				url: pag + "/excluir.php",
+				method: "post",
+				data: $('form').serialize(),
+				dataType: "text",
+				success: function (mensagem) {
+
+					if (mensagem.trim() === 'Excluído com Sucesso!!') {
+
+
+						$('#btn-cancelar-excluir').click();
+						window.location = "index.php?pag=" + pag;
+					}
+
+					$('#mensagem_excluir').text(mensagem)
+
+
+
+				},
+
+			})
+		})
+	})
+</script>

@@ -1,0 +1,5 @@
+    $destinatario = $email;
+    $assunto = $nome_loja . ' - Recuperação de Senha';
+    $mensagem = utf8_decode('Sua senha é ' .$senha);
+    $cabecalhos = "From: ".$email;
+    mail($destinatario, $assunto, $mensagem, $cabecalhos);
