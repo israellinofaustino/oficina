@@ -224,7 +224,7 @@ if (@$_GET["funcao"] != null && @$_GET["funcao"] == "excluir") {
 
             success: function (mensagem) {
                 $('#mensagem').removeClass()
-                if (mensagem.trim() == "Saved successfully!") {
+                if (mensagem.trim() == "Saved Successfully!") {
                     //$('#nome').val('');
                     //$('#cpf').val('');
                     $('#btn-fechar').click();
