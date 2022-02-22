@@ -196,7 +196,7 @@ $menu2 = "recepcionistas";
                         } else {
                         @include_once("home.php");
                         }
-                        ?>
+                    ?>
 
                 </div>
                 <!-- /.container-fluid -->
